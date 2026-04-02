@@ -1,0 +1,6 @@
+from google.auth.crypt.es import EsSigner, EsVerifier
+
+class ES256Verifier(EsVerifier):
+    ...
+class ES256Signer(EsSigner):
+    ...

@@ -1,0 +1,13 @@
+from collections.abc import Mapping
+
+import google.auth
+import google.auth.transport
+from google.auth.credentials import Credentials as Credentials
+from google.auth.transport import Request as Request
+from typing import Optional, Sequence, Tuple, Any
+
+
+def load_credentials_from_file(filename: str, scopes: Optional[Sequence[str]] = None, default_scopes: Optional[Sequence[str]] = None, quota_project_id: Optional[str] = None, request: Optional[google.auth.transport.Request] = None) -> Tuple['google.auth.credentials.Credentials', Optional[str]]: ...
+def load_credentials_from_dict(info: Mapping[str, Any], scopes: Optional[Sequence[str]] = None, default_scopes: Optional[Sequence[str]] = None, quota_project_id: Optional[str] = None, request: Optional[google.auth.transport.Request] = None) -> Tuple['google.auth.credentials.Credentials', Optional[str]]: ...
+def get_api_key_credentials(key: str) -> 'google.auth.credentials.Credentials': ...
+def default(scopes: Optional[Sequence[str]] = None, request: Optional[google.auth.transport.Request] = None, quota_project_id: Optional[str] = None, default_scopes: Optional[Sequence[str]] = None) -> Tuple['google.auth.credentials.Credentials', Optional[str]]: ...
